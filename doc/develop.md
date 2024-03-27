@@ -7,8 +7,8 @@ docker-compose up -d
 ## MySQL setup
 
 ```sh
-wget https://downloads.mysql.com/docs/world.sql.gz
-gzip world.sql.gz
+curl -O https://downloads.mysql.com/docs/world-db.tar.gz
+tar xf world-db.tar.gz --strip-components 1
 
 # MySQL 5.6
 mysql -u root -proot -h 127.0.0.1 -P 13305 < world.sql
